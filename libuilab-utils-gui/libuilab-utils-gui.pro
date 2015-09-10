@@ -9,6 +9,8 @@ QT       += widgets
 TARGET = uilab-utils-gui
 TEMPLATE = lib
 
+QMAKE_CXXFLAGS += -std=c++0x
+
 DEFINES += LIBUILABUTILSGUI_LIBRARY
 
 SOURCES += utilsbase.cpp

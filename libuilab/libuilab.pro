@@ -9,12 +9,15 @@ QT       -= gui
 TARGET = uilab
 TEMPLATE = lib
 
+QMAKE_CXXFLAGS += -std=c++0x
+
 DEFINES += LIBUILAB_LIBRARY
 
 SOURCES += uilabbase.cpp
 
 HEADERS += uilabbase.h\
-        libuilab_global.h
+        libuilab_global.h \
+    uilab_modules.h
 
 unix {
     target.path = /usr/lib

@@ -15,6 +15,11 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+    void loadPlugins();
+
+public slots:
+    void clicked();
+
 private:
     Ui::MainWindow *ui;
 };

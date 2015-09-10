@@ -6,7 +6,7 @@
 
 QT       -= gui
 
-TARGET = libuilab
+TARGET = uilab
 TEMPLATE = lib
 
 DEFINES += LIBUILAB_LIBRARY

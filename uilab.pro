@@ -1,4 +1,5 @@
 TEMPLATE = subdirs
 
 SUBDIRS+= uilab-main \
-    libuilab
+    libuilab \
+    libuilab-utils-gui

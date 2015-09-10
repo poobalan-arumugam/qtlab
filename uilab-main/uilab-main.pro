@@ -19,9 +19,17 @@ HEADERS  += mainwindow.h
 
 FORMS    += mainwindow.ui
 
-win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../libuilab/ -llibuilab
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../libuilab/ -llibuilabd
-else:unix: LIBS += -L$$OUT_PWD/../libuilab/ -llibuilab
+
+win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../libuilab/ -luilab
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../libuilab/ -luilabd
+else:unix: LIBS += -L$$OUT_PWD/../libuilab/ -luilab
 
 INCLUDEPATH += $$PWD/../libuilab
 DEPENDPATH += $$PWD/../libuilab
+
+win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../libuilab-utils-gui/ -luilab-utils-gui
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../libuilab-utils-gui/ -luilab-utils-guid
+else:unix: LIBS += -L$$OUT_PWD/../libuilab-utils-gui/ -luilab-utils-gui
+
+INCLUDEPATH += $$PWD/../libuilab-utils-gui
+DEPENDPATH += $$PWD/../libuilab-utils-gui

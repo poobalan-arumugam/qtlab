@@ -17,7 +17,8 @@ SOURCES += uilabbase.cpp
 
 HEADERS += uilabbase.h\
         libuilab_global.h \
-    uilab_modules.h
+    uilab_modules.h \
+    uilab_identity.h
 
 unix {
     target.path = /usr/lib

@@ -18,7 +18,14 @@ SOURCES += uilabbase.cpp
 HEADERS += uilabbase.h\
         libuilab_global.h \
     uilab_modules.h \
-    uilab_identity.h
+    nsii_eventbus.h \
+    nsii_identity.h \
+    nsii_logging.h \
+    nsii_service.h \
+    nsii_service_registry.h \
+    nsii_observables.h \
+    nsii_rules.h \
+    nsii_alert.h
 
 unix {
     target.path = /usr/lib

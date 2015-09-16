@@ -1,5 +1,5 @@
-#ifndef UILAB_IDENTITY
-#define UILAB_IDENTITY
+#ifndef NSII_IDENTITY
+#define NSII_IDENTITY
 
 #include <QString>
 
@@ -70,5 +70,5 @@ public:
 } } } // namespaces
 
 
-#endif // UILAB_IDENTITY
+#endif // NSII_IDENTITY
 

@@ -5,6 +5,7 @@
 #include "uilab_modules.h"
 #include <QPushButton>
 #include <QMessageBox>
+#include <QAction>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -32,9 +33,18 @@ void MainWindow::loadPlugins()
                     = qobject_cast<nsii::common::ui::ModuleInterface*>(plugin);
             QObject* obutton = moduleInterface->getModule();
             QPushButton* button = qobject_cast<QPushButton*>(obutton);
-            button->setParent(this);
+
+
+            button->setParent(ui->tab_1);
             button->show();
             connect(button, SIGNAL(clicked(bool)),
+                    this, SLOT(clicked()));
+
+            QAction* action = new QAction(button->text(), this);
+            ui->mainToolBar->addAction(action);
+
+            ui->menuBar->addAction(action);
+            connect(action, SIGNAL(triggered(bool)),
                     this, SLOT(clicked()));
         }
     }
